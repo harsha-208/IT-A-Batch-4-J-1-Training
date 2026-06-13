@@ -1,0 +1,1296 @@
+1.  array sum
+
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+     System.out.println("Enter the size");
+ 
+ 
+        int sum=0;
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[]a=new int[n];
+        for (int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+            sum+=a[i];
+        }
+        System.out.println(sum);
+        }
+    }
+
+2. maximum element
+
+
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+     System.out.println("Enter the size");
+ 
+ 
+ 
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[]a=new int[n];
+ 
+        for (int i=0;i<n;i++){
+ 
+ 
+                a[i]=sc.nextInt();
+        }
+        int max=a[0];
+ 
+        for(int i=1;i<n;i++){
+            if(a[i]>max){
+ 
+
+                max=a[i];
+          System.out.println("The maximum element");
+ 
+ 
+ 
+        }
+        }
+ 
+        System.out.println(max);
+        }
+    }
+
+
+3.sum positive value
+
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+     System.out.println("Enter the size");
+ 
+ 
+        int sum=0;
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[]a=new int[n];
+ 
+        for(int i=0;i<n;i++){
+ 
+ 
+            a[i]=sc.nextInt();
+             if(a[i]>0){
+            sum+=a[i];
+             }
+ 
+        }
+        System.out.println(sum);
+        }
+    }
+
+4.   minimum element
+
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+     System.out.println("Enter the size");
+ 
+ 
+ 
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[]a=new int[n];
+ 
+        for(int i=0;i<n;i++){
+ 
+ 
+            a[i]=sc.nextInt();
+        }
+        int min=a[0];
+        for(int i=1;i<n;i++){
+            if(a[i]<min){
+ 
+                min=a[i];
+ 
+            System.out.println("The minimum element");
+        }
+        }
+ 
+ 
+ 
+        System.out.println(min);
+        }
+    }
+
+
+5.count the value when it goes odd to even
+
+
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+     System.out.println("Enter the size");
+ 
+ 
+ 
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[]a=new int[n];
+ 
+        for(int i=0;i<n;i++){
+ 
+ 
+            a[i]=sc.nextInt();
+        }
+         int count=0;
+ 
+        for(int i=0;i<n-1;i++){
+            if(a[i]%2!=0 && a[i+1]%2==0){
+                count++;
+              System.out.println("The count is");
+ 
+            }
+ 
+ 
+ 
+          }
+ 
+        System.out.println(count);
+        }
+    }
+
+6.  searching an array
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int a = sc.nextInt();
+
+        boolean found = false;
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == a) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found)
+            System.out.println("present in the array");
+        else
+            System.out.println("not found");
+    }
+}
+
+
+7. reverse the number
+
+
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+ 
+ 
+ 
+ 
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+ 
+        int rev=0;
+        while(n>0){
+            int l=n%10;
+            rev=rev*10+l;
+            n=n/10;
+ 
+        }
+        System.out.println(rev);
+        }
+    }
+
+8. search a number how many times appear
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] a = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        boolean[] visited = new boolean[n];
+
+        for(int i = 0; i < n; i++) {
+
+            if(visited[i])
+                continue;
+
+            int count = 1;
+
+            for(int j = i + 1; j < n; j++) {
+                if(a[i] == a[j]) {
+                    count++;
+                    visited[j] = true;
+                }
+            }
+
+            System.out.println(a[i] + " ---> " + count + " times");
+        }
+    }
+}
+
+
+9. removing duplicate value
+
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+     System.out.println("Enter the size");
+ 
+ 
+ 
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[]a=new int[n];
+        for (int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+ 
+        }
+        for(int i=0;i<n;i++){
+              boolean duplicate=false;
+        for(int j=0;j<i;j++){
+            if(a[i]==a[j]){
+                duplicate=true;
+                break;
+ 
+            }
+ 
+        }
+        if(!duplicate){
+ 
+ 
+        System.out.print(a[i]+" ");
+        }
+    }
+    }
+}
+
+10.  For each adjacent pair of sticks, to get the smallest possible bigger stick, keep the smaller stick and remove the larger one.
+
+
+
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+     System.out.println("Enter the size");
+ 
+ 
+        int sum=0;
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[]a=new int[n];
+ 
+        for(int i=0;i<n;i++){
+ 
+ 
+            a[i]=sc.nextInt();
+        }
+ 
+ 
+        for(int i=0;i<n;i+=2){
+            if(a[i]<a[i+1]){
+ 
+              sum+=a[i];
+            }
+            else{
+                sum+=a[i+1];
+            }
+ 
+            }
+ 
+
+ 
+              System.out.println(sum);
+ 
+          }
+ 
+ 
+        }
+
+11.  A truck owner wants to calculate fuel consumption.
+
+Input the number of liters of fuel filled in the tank.
+Input the distance traveled in kilometers.
+Calculate:
+Liters per 100 KM = (liters / distance) × 100
+Miles per Gallon using:
+1 km = 0.6214 miles
+1 liter = 0.2642 gallons
+If liters or distance is less than or equal to 0, print "Invalid Input".
+Simple Logic
+Read liters
+If liters <= 0 → Invalid Input
+
+Read distance
+If distance <= 0 → Invalid Input
+
+Calculate Liters/100KM
+Calculate Miles/Gallon
+
+Print results
+
+For CTS exams/interviews, you can remember it as:
+
+"Read input → Check invalid → Apply formulas → Print output."
+
+
+
+ANSWER:
+
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+ 
+ 
+ 
+ 
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of litres to fill the tank");
+        double litre=sc.nextDouble();
+        if(litre<0){
+            System.out.println("the litre is invalid");
+            return;
+ 
+        }
+        System.out.println("Enter the distance covered");
+        double distance=sc.nextDouble();
+        if(distance<0){
+            System.out.println("the distance  is invalid");
+            return;
+        }
+        double a;
+        a=litre/distance*100;
+ 
+ 
+        double miles=distance*0.6214;
+        double gallons=litre*0.2642;
+ 
+        double b;
+        b=miles/gallons;
+        System.out.println("Litres/100KM");
+        System.out.printf("%.2f\n",a);
+ 
+       System.out.println("Miles/gallons");
+        System.out.printf("%.2f",b);
+ 
+        }
+ 
+        }
+
+12.  combining two array
+
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+     System.out.println("Enter the size");
+ 
+ 
+        Scanner sc=new Scanner(System.in);
+ 
+        int n=sc.nextInt();
+        int[]a=new int[n];
+        int m=sc.nextInt();
+        int[]b=new int[m];
+        for (int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        for (int j=0;j<m;j++){
+ 
+            b[j]=sc.nextInt();
+        }
+        int[]c=new int[n+m];
+ 
+        for(int i=0;i<n;i++){
+            c[i]=a[i];
+        }
+ 
+        for(int j=0;j<m;j++){
+        c[n+j]=b[j];
+        }
+        for(int i=0;i<n+m;i++){
+ 
+        System.out.println(c[i]);
+        }
+        }
+    }
+
+13. Adding three value to get target value
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] a = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        int target = sc.nextInt();
+
+ 
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                for (int k = j + 1; k < n; k++) {
+
+                    if (a[i] + a[j] + a[k] == target) {
+                        System.out.println(a[i] + " " + a[j] + " " + a[k]);
+                    }
+                }
+            }
+        }
+    }
+}
+
+14.  Adding two values to get target
+
+import java.util.Scanner;
+
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] a = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+ 
+        int target = sc.nextInt();
+
+ 
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+ 
+
+                    if (a[i] + a[j] == target) {
+                        System.out.println(a[i] + " " + a[j]);
+                    }
+ 
+            }
+        }
+    }
+}
+
+15.  adding the first value in both a and b like that for all value and store in c.
+
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+class Main {
+    public static void main(String args[]) {
+
+        System.out.println("Enter the size");
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] a = new int[n];
+
+        int m = sc.nextInt();
+        int[] b = new int[m];
+
+ 
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+ 
+        for (int i = 0; i < m; i++) {
+            b[i] = sc.nextInt();
+        }
+
+        int size = Math.min(n, m);
+        int[] c = new int[n];
+
+for (int i = 0; i < n; i++) {
+    c[i] = a[i] + b[i];
+}
+System.out.println("Array c:");
+for (int i = 0; i < n; i++) {
+    System.out.print(c[i] + " ");
+}
+
+Arrays.sort(c);
+
+System.out.println("\nSorted c:");
+for (int i = 0; i < n; i++) {
+    System.out.print(c[i] + " ");
+}
+    }
+}
+ 
+
+16 ASCII value find
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+ 
+        System.out.print("Enter a character: ");
+        ch = sc.next().charAt(0);
+
+ 
+        char result = (ch >= 'A' && ch <= 'Z') ? (char)(ch + 32) : ch;
+
+        System.out.println("Lowercase character: " + result);
+        System.out.println("Ascii value: " + (int)result);
+    }
+}
+ 
+17 .Reverse to find palindrome
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a string");
+        String s = sc.nextLine();
+        System.out.println(s);
+ 
+
+        String rev = "";
+
+        for(int i = s.length() - 1; i >= 0; i--) {
+            rev = rev + s.charAt(i);
+        }
+
+        System.out.println("Reverse String: " + rev);
+
+        if(s.equals(rev))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+ 
+18. ASCII value caps ans small char
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+        int sum=0;
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+
+ 
+        if(ch <= 'A' && ch >= 'Z'){
+ 
+                  sum=ch+32;
+ 
+        }
+        else {
+            sum=ch;
+        }
+        System.out.println(sum);
+ 
+ 
+
+ 
+    }
+}
+
+19. vowels count print the value
+
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String args[])
+    {
+ 
+ 
+ 
+ 
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+
+ 
+        if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'||ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+            System.out.println(ch);
+ 
+ 
+         count+=1;
+        }
+        }
+        System.out.println(count);
+ 
+ 
+    }
+}
+
+20. counting frequency letter in string
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        boolean[] visited = new boolean[s.length()];
+
+        for (int i = 0; i < s.length(); i++) {
+
+            if (visited[i])
+                continue;
+
+            int count = 1;
+
+            for (int j = i + 1; j < s.length(); j++) {
+
+                if (s.charAt(i) == s.charAt(j)) {
+                    count++;
+                    visited[j] = true;
+                }
+            }
+
+            System.out.println(s.charAt(i) + " ---> " + count + " times");
+        }
+    }
+}
+
+
+
+21.  printing first substring in a palindrome
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.next();
+
+        String first = "";
+
+        System.out.println("Palindrome Substrings:");
+
+        for (int i = 0; i < s.length(); i++) {
+
+            for (int j = i + 1; j <= s.length(); j++) {
+
+                String sub = s.substring(i, j);
+
+                String rev = "";
+
+                for (int k = sub.length() - 1; k >= 0; k--) {
+                    rev = rev + sub.charAt(k);
+                }
+
+                if (sub.equals(rev) && sub.length() > 1) {
+                    System.out.println(sub);
+
+                    if (first.equals("")) {
+                        first = sub;
+                    }
+                }
+            }
+        }
+
+        System.out.println("First palindrome substring = " + first);
+    }
+}
+ 
+
+22.return only special character only
+
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+        for (int i = 0; i < s.length(); i++) {
+
+            char ch = s.charAt(i);
+
+            if (!(ch >= 'A' && ch <= 'Z') && !(ch >= 'a' && ch <= 'z') && !(ch >= '0' && ch <= '9') && ch != ' ') {
+ 
+
+                System.out.print(ch);
+            }
+        }
+    }
+}
+
+23.   finding number of subarrays
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int count = 0;
+
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+.
+            for (int j = i; j < n; j++) {
+                sum = sum + arr[j];
+
+                if (sum == 0) {
+                    count++;
+                }
+            }
+        }
+
+        System.out.println(count);
+    }
+}
+ 
+
+24.pattern using Alaphabet
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int a=sc.nextInt();
+	    int t=2*a-1;
+	    for(int row=0;row<a;row++){
+	        for(int col=a-1;col>=row;col--){
+	            System.out.print((char)('A' + col));
+	        }
+	
+	        System.out.println( );
+	    }
+	
+	
+	}
+}
+
+25. second largest
+
+import java.util.ArrayList;
+
+class Main {
+    public static void main (String[] args) {
+ 
+ 
+ 
+      	ArrayList<Integer> a = new ArrayList<>();
+ 
+ 
+ 
+      	a.add(1);
+      	a.add(2);
+      	a.add(3);
+      	a.add(4);
+        a.add(5);
+      	a.add(6);
+      	a.add(7);
+      	a.add(8);
+      	a.add(9);
+      	a.add(10);
+ 
+      	int largest=a.get(0);
+ 
+      	for(int i=1;i<a.size()-1;i++){
+      	    if(a.get(i)-1>largest)
+      	        largest=a.get(i);
+ 
+      	    }
+ 
+ 
+      	 System.out.println("Second largest"+ "=" +largest);
+ 
+ 
+ 
+      	        }
+ 
+      	    }
+ 
+
+26. Remove duplicate
+
+
+import java.util.ArrayList;
+
+class Main {
+    public static void main (String[] args) {
+ 
+ 
+ 
+      	ArrayList<Integer> a = new ArrayList<>();
+ 
+ 
+ 
+      	a.add(1);
+      	a.add(2);
+      	a.add(3);
+      	a.add(2);
+        a.add(4);
+      	a.add(5);
+      	for(int i=0;i<a.size();i++){
+      	  for(int j=i+1;j<a.size();j++){
+ 
+      	    if(a.get(i)==a.get(j)){
+      	        a.remove(j);
+      	    }
+      	  }
+      	}
+ 
+      	        System.out.println(a);
+      	  }
+      	}
+
+27.Anagram
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string  1: ");
+        String a = sc.nextLine();
+ 
+
+       System.out.print("Enter a string  2: ");
+        String b = sc.nextLine();
+
+        for (int i = 0; i < a.length(); i++) {
+            for (int j=0; j < a.length(); j++) {
+
+                if (a.charAt(i) == b.charAt(j)) {
+                   System.out.println("Anagram");
+                }
+                else{
+                    System.out.println(" not Anagram");
+ 
+                }
+            }
+        }
+    }
+}
+
+ 
+
+
+28. printing student detail using ArrayList
+      Create New Project
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Integer> id = new ArrayList<>();
+        ArrayList<String> name = new ArrayList<>();
+        ArrayList<String> phone = new ArrayList<>();
+
+        System.out.print("Enter number of students: ");
+        int n = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+
+            System.out.print("Enter ID: ");
+            id.add(sc.nextInt());
+
+            System.out.print("Enter Name: ");
+            name.add(sc.next());
+
+            System.out.print("Enter Phone Number: ");
+            phone.add(sc.next());
+        }
+
+        System.out.println("\nStudent Details:");
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("ID    : " + id.get(i));
+            System.out.println("Name  : " + name.get(i));
+            System.out.println("Phone : " + phone.get(i));
+            System.out.println();
+        }
+    }
+}
+
+
+29.reverse a arraylist
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+        while (num > 0) {
+            int digit = num % 10;
+            list.add(digit);
+            num = num / 10;
+        }
+
+        System.out.println("Reversed Number:");
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i));
+        }
+    }
+
+30. Anagram
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter String 1: ");
+        String a = sc.nextLine();
+
+        System.out.print("Enter String 2: ");
+        String b = sc.nextLine();
+
+        // Check lengths
+        if (a.length() != b.length()) {
+            System.out.println("Not Anagram");
+            return;
+        }
+
+        char[] arr1 = a.toCharArray();
+        char[] arr2 = b.toCharArray();
+
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+        if (Arrays.equals(arr1, arr2)) {
+            System.out.println("Anagram");
+        } else {
+            System.out.println("Not Anagram");
+        }
+    }
+}
+
+31. pattern using Alaphabet
+Reverse Butterfly Pattern
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+
+ 
+            for (int j = 0; j < i; j++) {
+                System.out.print("b");
+            }
+
+ 
+            for (int j = 0; j < 2 * (n - i) - 1; j++) {
+                System.out.print("*");
+            }
+
+ 
+            for (int j = 0; j < i; j++) {
+                System.out.print("b");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+
+Another method(output different)
+
+
+
+import java.util.*;
+public class Tut
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		for (int i = n - 1; i >= 0; i--) {
+            for (int j = 1; j <= i; j++)
+                System.out.print("b");
+            for (int j = 2; j <= 2 * (n-i); j++)
+                System.out.print("*");
+            for (int j = 1; j <= i; j++)
+                System.out.print("b");
+            System.out.println();
+ 
+        }
+	}
+}
+
+
+32.Word Frequency Using HashMap
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter words:");
+        String s = sc.nextLine();
+
+        String arr[] = s.split(" ");
+
+        HashMap<String, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (map.containsKey(arr[i])) {
+                map.put(arr[i], map.get(arr[i]) + 1);
+            } else {
+                map.put(arr[i], 1);
+            }
+        }
+
+        System.out.println(map);
+    }
+}
+
+33.  First Non-Repeating Character Using HashMap
+
+ 
+ import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a string:");
+        String s = sc.nextLine();
+
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if (map.containsKey(ch)) {
+                map.put(ch, map.get(ch) + 1);
+            } else {
+                map.put(ch, 1);
+            }
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if (map.get(ch) == 1) {
+                System.out.println(ch);
+                break;
+            }
+        }
+    }
+}
+ 
+34.Check Two Arrays Are Equal Using HashMap
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int a[] = new int[n];
+        int b[] = new int[n];
+
+        HashMap<Integer, Integer> map1 = new HashMap<>();
+        HashMap<Integer, Integer> map2 = new HashMap<>();
+
+        // First array
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+
+            if (map1.containsKey(a[i]))
+                map1.put(a[i], map1.get(a[i]) + 1);
+            else
+                map1.put(a[i], 1);
+        }
+
+        // Second array
+        for (int i = 0; i < n; i++) {
+            b[i] = sc.nextInt();
+
+            if (map2.containsKey(b[i]))
+                map2.put(b[i], map2.get(b[i]) + 1);
+            else
+                map2.put(b[i], 1);
+        }
+
+        if (map1.equals(map2))
+            System.out.println("Arrays are equal");
+        else
+            System.out.println("Arrays are not equal");
+    }
+}
+ 
+
+35. Find Duplicate Elements Using HashMap
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < n; i++) {
+            int num = sc.nextInt();
+
+            if (map.containsKey(num)) {
+                map.put(num, map.get(num) + 1);
+            } else {
+                map.put(num, 1);
+            }
+        }
+
+        for (int key : map.keySet()) {
+            if (map.get(key) > 1) {
+                System.out.println(key);
+            }
+        }
+    }
+}
+ 
+
+36. Find Two Numbers Whose Sum Is Equal to Target Using HashMap
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        int target = sc.nextInt();
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < n; i++) {
+
+            int x = target - a[i];
+
+            if (map.containsKey(x)) {
+                System.out.println(x + " " + a[i]);
+                break;
+            }
+
+            map.put(a[i], 1);
+        }
+    }
+}
